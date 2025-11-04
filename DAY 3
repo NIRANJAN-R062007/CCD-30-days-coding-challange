@@ -1,0 +1,93 @@
+Program 1
+
+Kitchen Timings:
+
+The working hours of Chef’s kitchen are from X pm to Y pm
+where
+1≤X<Y≤12.
+You need to find the number of hours Chef works.
+
+Input Format:
+The first line of input contains a single integer T, denoting the number of test cases.
+Each test case consists of two space-separated integers X and Y — the starting and ending time of working hours respectively.
+
+Output Format:
+For each test case, print on a new line the number of hours Chef works.
+
+Constraints:
+1≤T≤100
+1≤X<Y≤12
+
+Program:
+x=int(input())
+for i in range(x):
+    y,z=map(int,input().split())
+    print(z-y)
+
+Sample Input:
+4
+1 2
+3 7
+9 11
+2 10
+
+Sample Output:
+1
+4
+2
+8
+
+Explanation:
+Test case 1: Chef starts at 1 pm and ends at 2 pm → works for 1 hour.
+Test case 2: Chef starts at 3 pm and ends at 7 pm → works for 4 hours.
+Test case 3: Chef starts at 9 pm and ends at 11 pm → works for 2 hours.
+Test case 4: Chef starts at 2 pm and ends at 10 pm → works for 8 hours.
+
+
+
+Program 2
+
+Minimum Cars Required:
+
+A single car can accommodate at most 4 people.
+There are N friends who want to go to a restaurant for a party.
+Find the minimum number of cars required to accommodate all the friends.
+
+Input Format:
+The first line contains a single integer T — the number of test cases.
+Each of the next T lines contains a single integer N — denoting the number of friends.
+
+Output Format:
+For each test case, output the minimum number of cars required to accommodate all the friends.
+
+Constraints:
+1≤T≤1000
+2≤N≤1000
+
+Program:
+t=int(input())
+for i in range(t):
+    x=int(input())
+    if x%4==0:
+        print(int(x/4))
+    else:
+        print(int(x/4)+1)
+
+Sample Input:
+4
+4
+2
+7
+98
+
+Sample Output:
+1
+1
+2
+25
+
+Explanation:
+Test case 1: There are 4 friends, and one car can accommodate 4 people → 1 car is required.
+Test case 2: There are 2 friends → 1 car is enough.
+Test case 3: There are 7 friends → 2 cars can accommodate up to 8 people → 2 cars are required.
+Test case 4: There are 98 friends → 25 cars (each holding 4) are required to fit everyone.
