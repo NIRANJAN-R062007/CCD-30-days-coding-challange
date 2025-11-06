@@ -1,0 +1,85 @@
+Problem 1
+
+Waiting Time
+Chef is eagerly waiting for a piece of information. His secret agent told him that this information would be revealed to him after K weeks.
+X days have already passed and Chef is getting restless now. Find the number of remaining days Chef has to wait for, to get the information.
+It is guaranteed that the information has not been revealed to the Chef yet.
+
+Input Format
+The first line of input will contain an integer T — the number of test cases. The description of T test cases follows.
+The first and only line of each test case contains two space-separated integers K and X, as described in the problem statement.
+
+Output Format
+For each test case, output the number of remaining days that Chef will have to wait for.
+
+Constraints
+1≤T≤500
+1≤K≤10
+1≤X<7⋅K
+
+Program
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
+    print(int((x*7)-y))
+
+
+Input
+4
+1 5
+1 6
+1 1
+1 2
+
+Output
+2
+1
+6
+5
+
+Explanation:
+Test case 1: The information will be revealed to the Chef after 1 week, which is equivalent to 7 days. Chef has already waited for 5 days, so he needs to wait for 2 more days in order to get the information.
+Test case 2: The information will be revealed to the Chef after 1 week, which is equivalent to 7 days. Chef has already waited for 6 days, so he needs to wait for 1 more day in order to get the information.
+Test case 3: The information will be revealed to the Chef after 1 week, which is equivalent to 7 days. Chef has already waited for 1 day, so he needs to wait for 6 more days in order to get the information.
+Test case 4: The information will be revealed to the Chef after 1 week, which is equivalent to 7 days. Chef has already waited for 2 days, so he needs to wait for 5 more days in order to get the information.
+
+
+
+Problem 2
+
+Count the Notebooks
+You know that 1 kg of pulp can be used to make 1000 pages and 1 notebook consists of 100 pages.
+Suppose a notebook factory receives N kg of pulp, how many notebooks can be made from that?
+
+Input Format
+First line will contain T, the number of test cases. Then the test cases follow. Each test case contains a single integer N - the weight of the pulp the factory has (in kgs).
+
+Output Format
+For each test case, output the number of notebooks that can be made using N kgs of pulp.
+
+Constraints
+1≤T≤100
+1≤N≤100
+
+Program
+t=int(input())
+for i in range(t):
+    n=int(input())
+    print(n*10)
+
+Input
+3
+1
+100
+50
+
+Output
+10
+1000
+500
+
+Explanation:
+Test case-1: 1 kg of pulp can be used to make 1000 pages which can be used to make 10 notebooks.
+Test case-2: 100 kg of pulp can be used to make 100000 pages which can be used to make 1000 notebooks.
+Test case-3: 50 kg of pulp can be used to make 50000 pages which can be used to make 500 notebooks.
+
