@@ -1,0 +1,118 @@
+Program 1
+
+Bidding
+Alice, Bob and Charlie are bidding for an artifact at an auction.
+Alice bids A rupees, Bob bids B rupees, and Charlie bids C rupees (where A, B, and C are distinct).
+According to the rules of the auction, the person who bids the highest amount will win the auction.
+Determine who will win the auction.
+
+Input Format
+The first line contains a single integer T — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains three integers A, B, and C, — the amount bid by Alice, Bob, and Charlie respectively.
+
+Output Format
+For each test case, output who (out of Alice, Bob, and Charlie) will win the auction.
+You may print each character of Alice, Bob, and Charlie in uppercase or lowercase (for example, ALICE, aliCe, aLIcE will be considered identical).
+
+Constraints
+1≤T≤1000
+1≤A,B,C≤1000
+A, B, and C are distinct.
+
+Program
+t=int(input())
+for i in range(t):
+    a,b,c=map(int,input().split())
+    if a>b and a>c:
+        print("Alice")
+    elif b>a and b>c:
+        print("Bob")
+    else:
+        print("Charlie")
+
+Input
+4
+200 100 400
+155 1000 566
+736 234 470
+124 67 2
+
+Output
+Charlie
+Bob
+Alice
+Alice
+
+Explanation:
+Test Case 1: Charlie wins the auction since he bid the highest amount.
+Test Case 2: Bob wins the auction since he bid the highest amount.
+Test Case 3: Alice wins the auction since she bid the highest amount.
+Test Case 4: Alice wins the auction since she bid the highest amount.
+
+
+
+
+
+
+
+Program 2
+It is My Serve
+Alice and Bob are playing a game of table tennis where irrespective of the point scored, every player makes 2 consecutive serves before the service changes.
+Alice makes the first serve of the match. Therefore the first 2 serves will be made by Alice, then the next 2 serves will be made by Bob and so on.
+Let's consider the following example match for more clarity:
+Alice makes the 1st serve.
+Let us assume, Bob wins this point. (Score is 0 for Alice and 1 for Bob)
+Alice makes the 2nd serve.
+Let us assume, Alice wins this point. (Score is 1 for Alice and 1 for Bob)
+Bob makes the 3rd serve.
+Let us assume, Alice wins this point. (Score is 2 for Alice and 1 for Bob)
+Bob makes the 4th serve.
+Let us assume, Alice wins this point. (Score is 3 for Alice and 1 for Bob)
+Alice makes the 5th serve.
+And the game continues…
+
+After the score reaches P and Q for Alice and Bob respectively, both the players forgot whose serve it is. Help them determine whose service it is.
+
+Input Format
+The first line contains a single integer 
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers 
+P and Q — the score of Alice and Bob respectively.
+
+Output Format
+For each test case, determine which player's (Alice or Bob) serve it is.
+You may print each character of Alice and Bob in uppercase or lowercase (for example, Bob, BOB, boB will be considered identical).
+
+Constraints
+1≤T≤200
+0≤P,Q≤10
+
+Program
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
+    if ((x+y)//2)%2==0:
+        print("Alice")
+    else:
+        print("Bob")
+
+Input
+4
+0 0
+0 2
+2 2
+4 7
+
+Output
+Alice
+Bob
+Alice
+Bob
+
+Explanation:
+Test Case 1: Since no points have been scored yet, this is the first serve of the match. Alice makes the 1st serve of the match.
+Test Case 2: Two points have been scored yet. Thus, it is the third serve of the match. Bob makes the 3rd serve of the match.
+Test Case 3: Four points have been scored yet. Thus, it is the fifth serve of the match. Alice makes the 5th serve of the match.
+Test Case 4: Eleven points have been scored yet. Thus, it is the twelfth serve of the match. Bob makes the 12th serve of the match.
+
+
