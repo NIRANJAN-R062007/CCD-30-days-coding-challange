@@ -1,0 +1,96 @@
+Problem 1
+
+Car Trip
+Chef rented a car for a day.
+Usually, the cost of the car is Rs 10 per km. However, since Chef has booked the car for the whole day, he needs to pay for at least 
+300 kms even if the car runs less than 300 kms.
+If the car ran X kms, determine the cost Chef needs to pay.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of a single integer X - denoting the number of kms Chef travelled.
+
+Output Format
+For each test case, output the cost Chef needs to pay.
+
+Constraints
+1≤T≤100
+1≤X≤1000
+
+Program
+t=int(input())
+for i in range(t):
+    x=int(input())
+    if x<=300:
+        print(300*10)
+    else:
+        print(x*10)
+
+Input
+5
+800
+3
+299
+301
+300
+
+Output
+8000
+3000
+3000
+3010
+3000
+
+Explanation:
+Test case 1: The car runs for 800 kms. Thus, he needs to pay 800⋅10=8000 rupees.
+Test case 2: The car runs for 3 kms. However, since Chef booked the car for whole day, he needs to pay for at least 300 kms. Thus, he needs to pay 300⋅10=3000 rupees.
+Test case 3: The car runs for 299 kms. However, since Chef booked the car for whole day, he needs to pay for at least 300 kms. Thus, he needs to pay 300⋅10=3000 rupees.
+Test case 4: The car runs for 301 kms. Thus, he needs to pay 301⋅10=3010 rupees.
+Test case 5: The car runs for 300 kms. Thus, he needs to pay 300⋅10=3000 rupees.
+
+
+
+
+
+Program 2
+
+The Cooler Dilemma 2
+The summer is at its peak in Chefland. Chef is planning to purchase a water cooler to keep his room cool. He has two options available:
+Rent a cooler at the cost of X coins per month.
+Purchase a cooler for Y coins.
+Chef wonders what is the maximum number of months for which he can rent the cooler such that the cost of renting is strictly less than the cost of purchasing it.
+
+Input Format
+The first line of input will contain an integer T — the number of test cases. The description of T test cases follows.
+The first and only line of each test case contains two integers X and Y, as described in the problem statement.
+
+Output Format
+For each test case, output the maximum number of months for which he can rent the cooler such that the cost of renting is strictly less than the cost of purchasing it.
+If Chef should not rent a cooler at all, output 0.
+
+Constraints
+1≤T≤1000
+1≤X,Y≤1000000000
+ 
+Program
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
+    print((y-1)//x)
+
+Input
+2
+5 12
+5 5
+
+Output
+2
+0
+
+Explanation:
+Test case 1: Cost of renting the cooler =5 coins per month. Cost of purchasing the cooler =12 coins. So, Chef can rent the cooler for 2 months at the cost of 10 coins,
+which is strictly less than 12 coins.
+Test case 2: Cost of renting the cooler =5 coins per month. Cost of purchasing the cooler =5 coins. If Chef rents the cooler for 1 month,
+it will cost 5 coins, which is not strictly less than the cost of purchasing it. So, Chef should not rent the cooler.
+
+
