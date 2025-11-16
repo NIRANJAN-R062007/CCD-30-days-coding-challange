@@ -1,0 +1,118 @@
+Program 1
+
+Messi vs Ronaldo
+
+In Chefland, a football player gets 2 points for each goal and 1 point for each assist.
+
+Messi has A goals and B assists this season, whereas Ronaldo has X goals and Y assists.
+Find out the player with more points this season.
+
+Input Format
+The first and only line of input will contain four space-separated integers A B X Y, the number of goals and assists that Messi and Ronaldo have, respectively.
+
+Output Format
+Print a single line containing:
+Messi, if Messi has more points than Ronaldo.
+Ronaldo, if Ronaldo has more points than Messi.
+Equal, if both have equal points.
+You can print in any letter-case (e.g., Messi, MESSI, messi).
+
+Constraints
+0 ≤ A, B, X, Y ≤ 100
+
+Program
+a,b,x,y=map(int,input().split())
+if (a*2+b*1)>(x*2+y*1):
+    print("Messi")
+elif (a*2+b*1)<(x*2+y*1):
+    print("Ronaldo")
+else:
+    print("Equal")
+
+Sample 1
+
+Input:
+40 30 50 10
+
+Output:
+Equal
+
+Explanation:
+Messi → 40×2 + 30 = 110
+Ronaldo → 50×2 + 10 = 110
+Both have 110 points.
+
+Sample 2
+
+Input:
+91 22 60 30
+
+Output:
+Messi
+
+Explanation:
+Messi → 91×2 + 22 = 204
+Ronaldo → 60×2 + 30 = 150
+Messi has more points.
+
+Sample 3
+
+Input:
+60 30 80 20
+
+Output:
+Ronaldo
+
+Explanation:
+Messi → 60×2 + 30 = 150
+Ronaldo → 80×2 + 20 = 180
+Ronaldo has more points.
+
+
+
+
+
+Program 2
+
+Single-use Attack
+
+Chef is playing a video game, and is now fighting the final boss.
+The boss has H health points. Each attack of Chef reduces the health of the boss by X. Chef also has a special attack that can be used at most once, and will decrease the health of the boss by Y.
+Chef wins when the health of the boss is ≤ 0. What is the minimum number of attacks needed by Chef to win?
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of a single line containing three space-separated integers H X Y — the parameters described in the statement.
+
+Output Format
+For each test case, output on a new line the minimum number of attacks needed by Chef to win.
+
+Constraints
+1 ≤ T ≤ 1000
+1 ≤ X < Y ≤ H ≤ 100
+
+Program
+t = int(input())
+for _ in range(t):
+    h,x,y=map(int,input().split())
+    print(min((h+x-1)//x,1+max(0,h-y+x-1)//x))
+
+Input:
+4
+100 25 40
+100 29 45
+46 1 2
+78 15 78
+
+Output:
+4
+3
+45
+1
+
+Explanation:
+Test case 1: Chef can attack normally 4 times: 25 + 25 + 25 + 25 = 100 damage.
+Test case 2: Two normal attacks and the special: 29 + 29 + 45 = 103 damage.
+Test case 3: Use the special first (46 − 2 = 44), then 44 normal attacks of 1 damage each: total 1 + 44 = 45.
+Test case 4: Use the special attack to immediately bring health to zero, needing only 1 attack.
+
