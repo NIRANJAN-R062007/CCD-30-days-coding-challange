@@ -1,0 +1,93 @@
+Program 1
+
+Parliament
+
+An important resolution is being discussed in the Parliament of Chefland. There are N members present in the Parliament, out of which X members voted in favour of the resolution and the remaining voted against it.
+According to the constitution of Chefland, a resolution is passed if and only if half or more than half the members present in the Parliament vote in favour of the resolution.
+Determine if the resolution is passed or not.
+
+Input Format
+The first line contains a single integer T — the number of test cases.
+Each test case contains two space-separated integers N and X — the total number of members and the number who voted in favour.
+
+Output Format
+For each test case, output YES if the resolution is passed, otherwise NO.
+You may print YES/NO in any letter case.
+
+Constraints
+1 ≤ T ≤ 5000
+1 ≤ N ≤ 100
+0 ≤ X ≤ N
+
+Program
+t=int(input())
+for i in range(t):
+    n,x=map(int,input().split())
+    if n/2>x:
+        print("NO")
+    else:
+        print("YES")
+
+Input
+4
+12 6
+9 4
+9 5
+12 0
+
+Output
+YES
+NO
+YES
+NO
+
+Explanation:
+Test Case 1: Half the members (6 out of 12) voted in favour → Passed.
+Test Case 2: Less than half voted in favour → Not passed.
+Test Case 3: More than half voted in favour → Passed.
+Test Case 4: Nobody voted in favour → Not passed.
+
+
+
+
+
+Program 2
+
+Chef Fantasy 11
+
+All of Chef's friends are playing fantasy cricket based on the ODI World Cup, and Chef would like to join them.
+For a certain cricket match, Chef has decided upon his team of 11 players. However, he hasn't yet decided who should be the captain and who should be the vice-captain.
+He's narrowed his decision down to N players out of the 11, from which he'll choose one to be the captain and one to be the vice-captain.
+How many different choices does he have?
+
+Input Format
+The first line contains a single integer T, denoting the number of test cases.
+Each test case contains a single integer N, the number of players Chef is considering.
+
+Output Format
+For each test case, output the number of possible choices of captain and vice-captain.
+
+Constraints
+1 ≤ T ≤ 10
+2 ≤ N ≤ 11
+
+Program
+t = int(input())
+for i in range(t):
+    n=int(input())
+    print(n*(n-1))
+
+Input
+2
+2
+3
+
+Output
+2
+6
+
+Explanation:
+Test case 1: With N = 2, there are only two possibilities: one is captain and the other is vice-captain.
+Test case 2: With N = 3, there are 3 × 2 = 6 possible captain/vice-captain combinations.
+
+
