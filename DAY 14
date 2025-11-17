@@ -1,0 +1,102 @@
+Program 1
+
+Bull or Bear
+
+Chef is on his way to becoming the new big bull of the stock market but is a bit weak at calculating whether he made a profit or a loss on his deal.
+Given that Chef bought the stock at value X and sold it at value Y, help him determine whether he made a PROFIT, LOSS, or the deal was NEUTRAL.
+
+Input Format
+The first line contains a single integer T, the number of test cases.
+Each test case contains two space-separated integers X and Y, the buying price and the selling price.
+
+Output Format
+For each test case, output:
+PROFIT if Y > X
+LOSS if Y < X
+NEUTRAL if Y = X
+The checker is case-insensitive.
+
+Constraints
+1 ≤ T ≤ 500
+1 ≤ X, Y ≤ 100
+
+Program
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
+    if y-x>0:
+        print("PROFIT")
+    elif y-x==0:
+        print("NEUTRAL")
+    else:
+        print("LOSS")
+
+Input
+4
+4 2
+8 8
+3 4
+2 1
+
+Output
+LOSS
+NEUTRAL
+PROFIT
+LOSS
+
+Explanation:
+Test case 1: X > Y → LOSS
+Test case 2: X = Y → NEUTRAL
+Test case 3: X < Y → PROFIT
+Test case 4: X > Y → LOSS
+
+
+
+
+Program 2
+
+Reach fast
+
+Chef is standing at coordinate A while Chefina is standing at coordinate B.
+In one step, Chef can increase or decrease his coordinate by at most K.
+Determine the minimum number of steps required by Chef to reach Chefina.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of three integers A, B, K — the initial coordinate of Chef, the coordinate of Chefina, and the maximum distance Chef can move in one step.
+
+Output Format
+For each test case, output the minimum number of steps required by Chef to reach Chefina.
+
+Constraint
+1 ≤ T ≤ 1000
+1 ≤ A, B ≤ 100
+1 ≤ K ≤ 100
+
+Program
+t=int(input())
+for i in range(t):
+    a,b,k=map(int,input().split())
+    d=abs(a-b)
+    print((d+k-1)//k)
+
+Input
+4
+10 20 3
+36 36 5
+50 4 100
+30 4 2
+
+
+Output
+4
+0
+1
+13
+
+
+Explanation
+Test case 1: Chef needs 4 steps — three steps of +3 (total +9) and one step of +1 (≤ K) to reach from 10 to 20.
+Test case 2: Chef is already at Chefina's coordinate, so 0 steps are needed.
+Test case 3: Chef can decrease by 46 in one step (≤ K = 100), so 1 step.
+Test case 4: Chef decreases by 2 each step; 13 steps of −2 move from 30 to 4.
