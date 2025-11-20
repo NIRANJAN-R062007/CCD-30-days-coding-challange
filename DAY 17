@@ -1,0 +1,113 @@
+Program 1
+
+Final Population
+
+There were initially X million people in a town, out of which Y million people left the town and Z million people immigrated to the town.
+Determine the final population of the town in millions.
+
+Input Format
+The first line contains a single integer T, the number of test cases.
+Each test case contains three integers X, Y, Z.
+
+Output Format
+For each test case, output the final population of the town in millions.
+
+Constraints
+1 ≤ T ≤ 100
+1 ≤ X, Y, Z ≤ 10
+Y ≤ X
+
+Program
+t=int(input())
+for i in range(t):
+    x,y,z=map(int,input().split())
+    print(x-y+z)
+
+Input
+4
+3 1 2
+2 2 2
+4 1 8
+10 1 10
+
+Output
+4
+2
+11
+19
+
+Explanation
+
+Test case 1:
+Initial population = 3 million
+Left = 1 million
+Immigrated = 2 million
+Final population = 3 − 1 + 2 = 4 million.
+
+Test case 2:
+Initial = 2, Left = 2, Immigrated = 2 → Final = 2.
+
+
+
+
+Program 2
+
+Airlines
+
+An airline operates X aircraft every day. Each aircraft can carry up to 100 passengers.
+One day, N passengers would like to travel to the same destination.
+What is the minimum number of new planes the airline must buy to carry all N passengers?
+
+Input Format
+The first line contains a single integer T, the number of test cases.
+Each test case contains two space-separated integers:
+X — the number of aircraft the airline currently owns
+N — the number of passengers travelling
+
+Output Format
+For each test case, output the minimum number of planes the airline needs to purchase.
+
+Constraints
+1 ≤ T ≤ 1000
+1 ≤ X ≤ 10⁶
+1 ≤ N ≤ 10⁶
+
+Program
+import math
+t=int(input())
+for i in range(t):
+    x,n=map(int,input().split())
+    ans=0
+    if n-(x*100)<=0:
+        print(ans)
+    else:
+        ans=(n-(x*100))/100
+        print(math.ceil(ans))
+
+Input
+3
+4 600
+3 523
+8 245
+
+Output
+2
+3
+0
+
+Explanation
+
+Test case 1:
+To carry 600 passengers, the airline needs 6 planes.
+They have 4 → must buy 2 more.
+
+Test case 2:
+To carry 523 passengers, they need 6 planes.
+They have 3 → must buy 3 more.
+
+Test case 3:
+To carry 245 passengers, they need 3 planes.
+They have 8 → no need to buy any.
+
+
+
