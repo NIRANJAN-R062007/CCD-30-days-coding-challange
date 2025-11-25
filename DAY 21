@@ -1,0 +1,118 @@
+Program 1
+
+Masterchef Finals
+
+Chef has been working hard to compete in MasterChef.
+He is ranked X out of all contestants. However, only 10 contestants are selected for the finals.
+
+Check whether Chef made it to the top 10 or not.
+
+Input Format
+The first line contains a single integer T, the number of test cases.
+Each test case contains one integer X — Chef’s current rank.
+
+Output Format
+For each test case, print YES if Chef made it to the top 10, otherwise print NO.
+(You may print the output in any letter case.)
+
+Constraints
+1 ≤ T ≤ 100
+1 ≤ X ≤ 100
+
+Program
+t=int(input())
+for i in range(t):
+    x=int(input())
+    if x<=10:
+        print("YES")
+    else:
+        print("NO")
+
+Input
+4
+15
+10
+1
+50
+
+Output
+NO
+YES
+YES
+NO
+
+Explanation
+
+Test case 1: Rank = 15 → not in top 10 → NO
+
+Test case 2: Rank = 10 → in top 10 → YES
+
+Test case 3: Rank = 1 → in top 10 → YES
+
+Test case 4: Rank = 50 → not in top 10 → NO
+
+
+
+
+
+Program 2
+
+Bath in Winters
+
+A geyser has a capacity of X litres of water and a bucket has a capacity of Y litres of water.
+
+One person requires exactly 2 buckets of water to take a bath.
+Find the maximum number of people that can take bath using water from one completely filled geyser.
+
+Input Format
+The first line contains T, the number of test cases.
+Each test case contains two integers X Y.
+
+Output Format
+For each test case, output a single integer — the maximum number of people who can take a bath.
+
+Constraints
+1 ≤ T ≤ 1000
+1 ≤ X, Y ≤ 100
+
+Program
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
+    print(x//(y*2))
+
+Input
+4
+10 6
+25 1
+100 10
+30 40
+
+Output
+0
+12
+5
+0
+
+Explanation
+
+Test case 1:
+Bucket = 6L → water per person = 12L.
+Geyser has only 10L → 0 people.
+
+Test case 2:
+Bucket = 1L → water per person = 2L.
+Geyser = 25L → 25/2 = 12 people.
+
+Test case 3:
+Bucket = 10L → water per person = 20L.
+Geyser = 100L → 5 people.
+
+Test case 4:
+Bucket = 40L → water per person = 80L.
+Geyser = 30L → 0 people.
+
+
+
+
+
