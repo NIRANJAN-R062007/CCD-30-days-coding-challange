@@ -1,0 +1,140 @@
+Program 1
+
+Determine the Score
+
+Chef appeared for a placement test.
+
+There is a problem worth X points. Chef finds out that the problem has exactly 10 test cases.
+Each test case is worth the same number of points.
+
+Chef passes N test cases.
+Determine the score Chef will get.
+
+Input Format
+The first line contains T, the number of test cases.
+Each test case contains two integers X N, the total points of the problem and the number of test cases Chef passes.
+
+Output Format
+For each test case, output the score Chef gets.
+
+Constraints
+1 ≤ T ≤ 100
+10 ≤ X ≤ 200
+0 ≤ N ≤ 10
+X is a multiple of 10
+
+Program 
+t=int(input())
+for i in range(t):
+    x,n=map(int,input().split())
+    print(int((x/10)*n))
+    
+Input
+4
+10 3
+100 10
+130 4
+70 0
+
+Output
+3
+100
+52
+0
+
+Explanation
+
+Test case 1:
+Total points = 10 → each test case = 1 point.
+Chef passes 3 → score = 3.
+
+Test case 2:
+Total points = 100 → each test case = 10 points.
+Chef passes 10 → score = 100.
+
+Test case 3:
+Total points = 130 → each test case = 13 points.
+Chef passes 4 → score = 52.
+
+Test case 4:
+Total points = 70 → each test case = 7 points.
+Chef passes 0 → score = 0.
+
+
+
+Program 2
+
+Chef and NextGen
+
+Chef works for a secret research group called NEXTGEN. They have achieved two major breakthroughs:
+1.Building a nuclear reactor that can use Helium-3 as fuel
+2.Extracting all Helium-3 from the moon
+
+To receive government funding, the project must prove its worth by generating at least A units of power per year for B years.
+
+You are given:
+X grams of Helium-3 available on the moon
+1 gram of Helium-3 provides Y units of power
+
+Determine whether the project can generate enough total power to meet the government's requirement.
+
+Input Format
+First line: integer T, number of test cases
+Each test case: four integers A B X Y
+
+Output Format
+For each test case, output Yes if NEXTGEN meets the power requirement, otherwise output No.
+(Output is case-insensitive.)
+
+Constraints
+1 ≤ T ≤ 1000
+1 ≤ A, B, X, Y ≤ 1000
+
+Program
+T=int(input())
+for i in range(T):
+    A,B,X,Y=map(int,input().split())
+    if A*B<=X*Y:
+        print("YES")
+    else:
+        print("NO")
+
+Input
+4
+1 2 3 4
+4 3 2 1
+2 18 9 4
+1 100 2 49
+
+Output
+Yes
+No
+Yes
+No
+
+Explanation
+
+Test case 1:
+Required power = A × B = 1 × 2 = 2
+Available power = X × Y = 3 × 4 = 12 → enough → Yes
+
+Test case 2:
+Required = 4 × 3 = 12
+Available = 2 × 1 = 2 → not enough → No
+
+Test case 3:
+Required = 2 × 18 = 36
+Available = 9 × 4 = 36 → enough → Yes
+
+Test case 4:
+Required = 1 × 100 = 100
+Available = 2 × 49 = 98 → not enough → No
+
+
+
+
+
+
+
+
+
