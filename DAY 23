@@ -1,0 +1,145 @@
+Program 1
+
+Audible Range
+
+Chef's dog Binary can hear frequencies from 67 Hertz to 45000 Hertz (both inclusive).
+
+Given Chef's command frequency X (in Hertz), determine whether Binary can hear it.
+
+Input Format
+The first line contains an integer T, the number of test cases.
+Each test case contains a single integer X — the frequency of Chef's command.
+
+Output Format
+For each test case, print YES if Binary can hear the command, otherwise print NO.
+(Output is case-insensitive.)
+
+Constraints
+1 ≤ T ≤ 10⁴
+1 ≤ X ≤ 10⁶
+
+Program
+t=int(input())
+for i in range(t):
+    x=int(input())
+    if x>=67 and x<=45000:
+        print("YES")
+    else:
+        print("NO")
+
+Input
+5
+42
+67
+402
+45000
+45005
+
+Output
+NO
+YES
+YES
+YES
+NO
+
+Explanation
+
+42 is less than 67 → NOT audible
+
+67 is within [67, 45000] → audible
+
+402 is within range → audible
+
+45000 is within range → audible
+
+45005 is greater than 45000 → NOT audible
+
+
+
+
+
+
+
+
+Program 2
+
+Complementary Strand in a DNA
+
+You are given the sequence of nucleotides of one strand of DNA through a string S of length N.
+The string S contains only the characters A, T, C, G.
+
+Chef knows that:
+
+A is complementary to T
+
+T is complementary to A
+
+C is complementary to G
+
+G is complementary to C
+
+Using the string S, determine the sequence of the complementary DNA strand.
+
+Input Format
+The first line contains T, the number of test cases.
+Each test case has two lines:
+First line: integer N, the length of string S
+Second line: string S
+
+Output Format
+For each test case, output a string of length N representing the complementary DNA strand.
+
+Constraints
+1 ≤ T ≤ 100
+1 ≤ N ≤ 100
+S contains only A, T, C, G
+
+Program
+t=int(input())
+for i in range(t):
+    n=int(input())
+    s=input()
+    ans=""
+    for j in s:
+        if j=='A':
+            ans+='T'
+        elif j=='T':
+            ans+='A'
+        elif j=='C':
+            ans+='G'
+        else:
+            ans+='C'
+    print(ans)
+
+Input
+4
+4
+ATCG
+4
+GTCC
+5
+AAAAA
+3
+TAC
+
+Output
+TAGC
+CAGG
+TTTTT
+ATG
+
+Explanation
+
+ATCG → TAGC
+
+GTCC → CAGG
+
+AAAAA → TTTTT
+
+TAC → ATG
+
+
+
+
+
+
