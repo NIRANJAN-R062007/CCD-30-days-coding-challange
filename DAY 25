@@ -1,0 +1,136 @@
+Program 1
+
+Just One More Episode
+
+Chef has to attend an exam that starts in X minutes, but of course, watching shows takes priority.
+
+Every episode of the show that Chef is watching is 24 minutes long.
+If he starts watching a new episode now, will he finish watching it strictly before the exam starts?
+
+Input Format
+
+The first line of input contains a single integer T, denoting the number of test cases.
+Each test case consists of one line containing a single integer X — the amount of time from now at which Chef's exam starts.
+
+Output Format
+
+For each test case, output on a new line:
+
+YES if Chef will finish the episode before the exam starts
+
+NO otherwise
+
+(You may print the answer in any mix of uppercase/lowercase.)
+
+Constraints
+
+1 ≤ T ≤ 100
+
+1 ≤ X ≤ 100
+
+Program
+t=int(input())
+for i in range(t):
+    x=int(input())
+    if x>24:
+        print("YES")
+    else:
+        print("NO")
+
+Input
+4
+30
+23
+60
+24
+
+Output
+Yes
+No
+Yes
+No
+
+Explanation
+
+Test case 1: 30 minutes available → enough for a 24-minute episode → Yes
+
+Test case 2: 23 minutes available → not enough → No
+
+Test case 3: 60 minutes available → enough → Yes
+
+Test case 4: 24 minutes → finishes exactly when exam starts, not strictly before → No
+
+
+
+
+
+
+Program 2
+
+Exams
+
+In Chefland, there are X schools, and each school has Y students.
+The year-end results are in and a total of Z students passed the exams.
+
+Assuming that all students appeared for the exams, find whether the number of students who passed in Chefland was strictly greater than 50%.
+
+Input Format
+
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of three space-separated integers X, Y, Z, as mentioned in the statement.
+
+Output Format
+
+For each test case, output on a new line:
+
+YES, if the total number of students who passed was strictly greater than 50%
+
+NO, otherwise
+
+(Output is case-insensitive.)
+
+Constraints
+
+1 ≤ T ≤ 2⋅10⁴
+
+1 ≤ X ≤ 5
+
+1 ≤ Y ≤ 50
+
+0 ≤ Z ≤ X⋅Y
+
+Program
+t=int(input())
+for i in range(t):
+    x,y,z=map(int,input().split())
+    if (z/(x*y))*100>50:
+        print("YES")
+    else:
+        print("NO")
+
+Input
+4
+2 10 12
+2 10 3
+1 5 3
+3 6 9
+
+Output
+YES
+NO
+YES
+NO
+
+Explanation
+
+Test case 1: Total students = 2⋅10 = 20, passed = 12 → 60% > 50% → YES
+
+Test case 2: Total students = 20, passed = 3 → 15% < 50% → NO
+
+Test case 3: Total students = 5, passed = 3 → 60% > 50% → YES
+
+Test case 4: Total students = 18, passed = 9 → 50% = 50% → NOT strictly greater → NO
+
+
+
+
