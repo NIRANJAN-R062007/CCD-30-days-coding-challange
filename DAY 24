@@ -1,0 +1,128 @@
+Program 1
+
+Spice Level
+
+Each item in Chef’s menu is assigned a spice level from 1 to 10.
+Based on the spice level, the item is categorized as:
+
+MILD: if the spice level is less than 4
+
+MEDIUM: if the spice level is greater than or equal to 4 but less than 7
+
+HOT: if the spice level is greater than or equal to 7
+
+Given the spice level X, determine the category of the item.
+
+Input Format
+
+The first line contains an integer T, the number of test cases.
+
+Each test case contains an integer X, the spice level.
+
+Output Format
+
+For each test case, output the category (MILD, MEDIUM, or HOT) on a new line.
+
+(Output is case-insensitive.)
+
+Constraints
+1 ≤ T ≤ 1000
+1 ≤ X ≤ 10
+
+Program
+t=int(input())
+for i in range(t):
+    x=int(input())
+    if x<4:
+        print("MILD")
+    elif x>=4 and x<7:
+        print("MEDIUM")
+    elif x>=7:
+        print("HOT")
+
+Input
+4
+4
+1
+6
+9
+
+Output
+MEDIUM
+MILD
+MEDIUM
+HOT
+
+Explanation
+
+Spice level 4 → MEDIUM
+
+Spice level 1 → MILD
+
+Spice level 6 → MEDIUM
+
+Spice level 9 → HOT
+
+
+
+
+
+
+Program 2
+
+Chef And Operators
+
+Chef has just started Programming, he is in first year of Engineering. Chef is reading about Relational Operators.
+Relational Operators are operators which check relationship between two values. Given two numerical values A and B you need to help chef in finding the relationship between them that is,
+
+First one is greater than second or,
+
+First one is less than second or,
+
+First and second one are equal.
+
+Input
+
+First line contains an integer T, which denotes the number of testcases.
+Each of the next T lines contain two integers A and B.
+
+Output
+
+For each line of input produce one line of output.
+This line contains any one of the relational operators
+< , > , =.
+
+Constraints
+
+1 ≤ T ≤ 10000
+1 ≤ A, B ≤ 1000000001
+
+Program
+t=int(input())
+for i in range(t):
+    a,b=map(int,input().split())
+    if a>b:
+        print(">")
+    elif a<b:
+        print("<")
+    else:
+        print("=")
+
+Input
+3
+10 20
+20 10
+10 10
+
+Output
+<
+>
+=
+
+Explanation
+
+In this example, 10 is lesser than 20.
+
+
+
+
