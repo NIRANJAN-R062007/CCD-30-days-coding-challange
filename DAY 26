@@ -1,0 +1,140 @@
+Program 1
+
+CodeChef Airlines
+
+Chef has opened a new airline. He has 10 airplanes, and each airplane has a capacity of X passengers.
+On the first day, Y people want to book a seat in any one of Chef’s airplanes.
+
+Given that Chef charges Z rupees for each ticket, find the maximum amount of money Chef can earn on the first day.
+
+Input Format
+
+The first line contains a single integer T, the number of test cases.
+
+Each test case contains three space-separated integers X, Y, Z:
+
+X — capacity of each airplane
+
+Y — number of people wanting to book
+
+Z — cost of each ticket
+
+Output Format
+
+For each test case, output on a new line the maximum amount Chef can earn.
+
+Constraints
+1 ≤ T ≤ 1000
+1 ≤ X, Y, Z ≤ 100
+
+Program
+t=int(input())
+for i in range(t):
+    x,y,z=map(int,input().split())
+    if x*10>=y:
+        print(y*z)
+    else:
+        print(10*x*z)
+
+Input
+4
+2 15 10
+1 10 1
+5 60 100
+1 11 7
+
+Output
+150
+10
+5000
+70
+
+Explanation
+
+Test case 1:
+Total seats = 10 × 2 = 20
+People = 15 → all 15 can book
+Money = 15 × 10 = 150
+
+Test case 2:
+Total seats = 10 × 1 = 10
+People = 10 → all 10 can book
+Money = 10 × 1 = 10
+
+Test case 3:
+Total seats = 10 × 5 = 50
+People = 60 → only 50 can book
+Money = 50 × 100 = 5000
+
+Test case 4:
+Total seats = 10 × 1 = 10
+People = 11 → only 10 can book
+Money = 10 × 7 = 70
+
+
+
+
+
+
+
+
+Program 2
+
+Get Lowest Free
+
+Chef goes to the supermarket to buy some items. There is a sale:
+
+👉 If Chef buys 3 items, he gets the item with the lowest price among the 3 for FREE.
+
+Example:
+If the 3 item prices are 6, 2, 4, Chef gets the 2-priced item free and pays 6 + 4 = 10.
+
+Chef buys 3 items priced A, B, C.
+Find the amount Chef needs to pay.
+
+Input Format
+
+The first line contains an integer T — number of test cases.
+
+Each test case contains three integers A, B, C — the prices of the items.
+
+Output Format
+
+For each test case, output the price Chef pays.
+
+Constraints
+1 ≤ T ≤ 100
+1 ≤ A, B, C ≤ 10
+
+Program
+t=int(input())
+for i in range(t):
+    a,b,c=map(int,input().split())
+    print(a+b+c-min(a,b,c))
+
+Input
+3
+6 2 4
+3 3 3
+8 4 4
+
+Output
+10
+6
+12
+
+Explanation
+
+Test case 1: Free item = 2 → pay 6 + 4 = 10
+
+Test case 2: All items are 3 → free one 3 → pay 3 + 3 = 6
+
+Test case 3: Free item = 4 → pay 8 + 4 = 12
+
+
+
+
+
+
+
+
