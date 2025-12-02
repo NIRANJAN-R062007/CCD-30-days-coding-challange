@@ -1,0 +1,142 @@
+Program 1
+
+Passes for Fair
+
+There is a fair going on in Chefland. Chef wants to visit the fair along with his N friends.
+Chef manages to collect K passes for the fair.
+Will Chef be able to enter the fair with all his N friends?
+
+Each person needs one pass.
+
+Each pass can be used by only one person.
+
+Input Format
+
+The first line contains a single integer T — the number of test cases.
+
+Each test case contains two space-separated integers N K.
+
+Output Format
+
+For each test case, print YES if Chef can enter the fair with all his N friends, otherwise print NO.
+(Output is case-insensitive.)
+
+Constraints
+
+1 ≤ T ≤ 100
+
+1 ≤ N, K ≤ 100
+
+Program
+t=int(input())
+for i in range(t):
+    n,k=map(int,input().split())
+    if n<k:
+        print("YES")
+    else:
+        print("NO")
+
+Input
+4
+5 8
+6 3
+2 2
+1 2
+
+Output
+YES
+NO
+NO
+YES
+
+Explanation
+
+Test case 1:
+Chef needs 5 passes for friends + 1 for himself = 6 passes. He collected 8 → YES
+
+Test case 2:
+Needs 7 passes total, has 3 → NO
+
+Test case 3:
+Needs 3 passes total, has 2 → NO
+
+Test case 4:
+Needs 2 passes total, has 2 → YES
+
+
+
+
+
+
+
+
+Program 2
+
+Mutated Minions
+
+Gru has not been in the limelight for a long time and is planning something nefarious. Frustrated by his minions’ incompetence, he has built a transmogrifier — a machine that mutates minions.
+
+Each minion has an intrinsic characteristic value (an integer). The transmogrifier adds an integer K to each of the minions’ characteristic values.
+
+Gru knows that if the new characteristic value of a minion is divisible by 7, then it will have Wolverine-like mutations.
+
+Given the initial characteristic integers of N minions, determine how many of them become Wolverine-like after transmogrification.
+
+Input Format
+
+The first line contains an integer T — the number of test cases.
+
+Each test case contains two lines:
+
+First line: two integers N and K
+
+Second line: N integers — the initial characteristic values of the minions
+
+Output Format
+
+For each test case, print a single integer — the number of Wolverine-like minions.
+
+Constraints
+
+1 ≤ T ≤ 100
+
+1 ≤ N ≤ 100
+
+1 ≤ K ≤ 100
+
+All characteristic values are between 1 and 10⁵ (inclusive)
+
+Program
+t=int(input())
+for i in range(t):
+    n,k=map(int,input().split())
+    integers=input().split()
+    ans=0
+    for j in range(n):
+        a=int(integers[j])
+        if (a+k)%7==0:
+            ans+=1
+    print(ans)
+
+Input
+1
+5 10
+2 4 1 35 1
+
+Output
+1
+
+Explanation
+
+After transmogrification, the new values are:
+
+{12, 14, 11, 45, 11}
+
+Only 14 is divisible by 7, so 1 minion becomes Wolverine-like.
+
+
+
+
+
+
+
