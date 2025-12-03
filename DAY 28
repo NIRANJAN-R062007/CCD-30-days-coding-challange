@@ -1,0 +1,161 @@
+Program 1
+
+Bob at the Bank
+
+Bob has an account in the Bobby Bank. His current account balance is W rupees.
+
+Each month:
+
+His office deposits X rupees.
+
+The bank deducts Y rupees as charges.
+
+You must find his final account balance after Z months.
+Note: Bob's balance may become negative.
+
+Input Format
+
+First line: integer T, the number of test cases.
+
+Each test case contains four integers:
+W, X, Y, Z — initial amount, amount deposited per month, amount deducted per month, number of months.
+
+Output Format
+
+For each test case, print the final account balance after Z months.
+
+Constraints
+
+1 ≤ T ≤ 1000
+
+1 ≤ W, X, Y, Z ≤ 10⁴
+
+Program
+t=int(input())
+for i in range(t):
+    w,x,y,z=map(int,input().split())
+    print(w+((x-y)*z))
+
+Input
+3
+100 11 1 10
+999 25 36 9
+2500 100 125 101
+
+Output
+200
+900
+-25
+
+Explanation
+
+Test case 1:
+Monthly change = +11 − 1 = +10
+Final balance = 100 + (10 × 10) = 200
+
+Test case 2:
+Monthly change = +25 − 36 = −11
+Final balance = 999 − (11 × 9) = 900
+
+Test case 3:
+Monthly change = +100 − 125 = −25
+Final balance = 2500 − (25 × 101) = −25
+
+
+
+
+
+
+
+
+Program 2
+
+Recent contest problems
+
+CodeChef recently revamped its practice page to make it easier for users to identify the next problems they should solve by introducing some new features:
+
+Recent Contest Problems – Contains only problems from the last 2 contests
+
+Separate Un-Attempted, Attempted, and All tabs
+
+Problem Difficulty Rating – The Recommended dropdown menu has various difficulty ranges so that you can attempt the problems most suited to your experience
+
+Popular Topics and Tags
+
+Chef has been participating regularly in rated contests but missed the last two contests due to his college exams. He now wants to solve them and so he visits the practice page to view these problems.
+
+Given a list of N contest codes, where each contest code is either START38 or LTIME108, help Chef count how many problems were featured in each of the contests.
+
+Input Format
+
+First line contains T, the number of test cases.
+
+Each test case has two lines:
+
+First line contains N, the total number of problems from the two recent contests.
+
+Second line contains N contest codes, each either START38 or LTIME108.
+
+Output Format
+
+For each test case, output two integers in a single new line:
+
+First integer = number of problems in START38
+
+Second integer = number of problems in LTIME108
+
+Constraints
+
+1 ≤ T ≤ 10
+
+1 ≤ N ≤ 1000
+
+Each contest code is either START38 or LTIME108
+
+Program
+t=int(input())
+for i in range(t):
+    n=int(input())
+    string=input().split()
+    sc=0
+    lc=0
+    for j in string:
+        if j=="START38":
+            sc+=1
+        elif j=="LTIME108":
+            lc+=1
+    print(sc,lc)
+
+Input
+4
+3
+START38 LTIME108 START38
+4
+LTIME108 LTIME108 LTIME108 START38
+2
+LTIME108 LTIME108
+6
+START38 LTIME108 LTIME108 LTIME108 START38 LTIME108
+
+Output
+2 1
+1 3
+0 2
+2 4
+
+Explanation
+
+Test case 1: There are 2 START38 and 1 LTIME108.
+
+Test case 2: There is 1 START38 and 3 LTIME108.
+
+Test case 3: There are 0 START38 and 2 LTIME108.
+
+Test case 4: There are 2 START38 and 4 LTIME108.
+
+
+
+
+
+
+
