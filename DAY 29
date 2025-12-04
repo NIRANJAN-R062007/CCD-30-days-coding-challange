@@ -1,0 +1,155 @@
+Program 1
+
+Puzzle Hunt
+
+Chef and some of his friends are planning to participate in a puzzle hunt event.
+
+The rules of the puzzle hunt state:
+"This hunt is intended for teams of 6 to 8 people."
+
+Chef's team has N people in total. Are they eligible to participate?
+
+Input Format
+
+The first and only line of input contains a single integer N — the number of people in Chef’s team.
+
+Output Format
+
+Print Yes if Chef’s team is eligible to participate, and No otherwise.
+
+Each letter may be printed in either uppercase or lowercase (e.g., YES, yes, yEs are all valid).
+
+Constraints
+
+1 ≤ N ≤ 10
+
+Program
+n=int(input())
+if n in [6,7,8]:
+    print("YES")
+else:
+    print("NO")
+
+Sample 1
+Input
+4
+
+Output
+No
+
+Explanation
+
+The puzzle hunt requires between 6 and 8 people.
+4 is not in that range, so Chef’s team cannot participate.
+
+Sample 2
+Input
+7
+
+Output
+Yes
+
+Explanation
+
+7 lies between 6 and 8.
+So, Chef’s team can participate.
+
+Sample 3
+Input
+8
+
+Output
+Yes
+
+Explanation
+
+8 is within the required range.
+So, Chef’s team can participate.
+
+
+
+
+
+
+
+
+Program 2
+
+Nearest Exit
+
+There are two exits in a bus with 100 seats:
+
+First exit is located beside seat number 1.
+
+Second exit is located beside seat number 100.
+
+Seats are arranged in a straight line from 1 to 100 with equal spacing between any 2 adjacent seats.
+
+A passenger prefers to choose the nearest exit while leaving the bus.
+
+Determine the exit taken by the passenger sitting on seat X.
+
+Input Format
+
+The first line contains a single integer T, the number of test cases.
+
+Each test case contains a single integer X, the seat number.
+
+Output Format
+
+For each test case, output LEFT if the passenger chooses the exit beside seat 1, and RIGHT otherwise.
+
+(Output is case-insensitive.)
+
+Constraints
+
+1 ≤ T ≤ 100
+
+1 ≤ X ≤ 100
+
+Program
+t=int(input())
+for i in range(t):
+    x=int(input())
+    if x<=50:
+        print("LEFT")
+    else:
+        print("RIGHT")
+
+Input
+6
+1
+50
+100
+30
+51
+73
+
+Output
+LEFT
+LEFT
+RIGHT
+LEFT
+RIGHT
+RIGHT
+
+Explanation
+
+Seat 1 → exit at seat 1 is immediate → LEFT
+
+Seat 50 → distance to seat 1 is 49, to seat 100 is 50 → LEFT
+
+Seat 100 → nearest exit is at seat 100 → RIGHT
+
+Seat 30 → distance to seat 1 is 29, to seat 100 is 70 → LEFT
+
+Seat 51 → distance to seat 1 is 50, to seat 100 is 49 → RIGHT
+
+Seat 73 → distance to seat 1 is 72, to seat 100 is 27 → RIGHT
+
+
+
+
+
+
+
