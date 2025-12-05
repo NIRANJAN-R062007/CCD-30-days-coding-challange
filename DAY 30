@@ -1,0 +1,144 @@
+Program 1
+
+Four Tickets
+
+Four friends want to attend a concert. Each ticket costs X rupees.
+They have decided to go to the concert if and only if the total cost of the tickets does not exceed 1000 rupees.
+
+Determine whether they will be going to the concert or not.
+
+Input Format
+
+The first line contains a single integer T, denoting the number of test cases.
+
+Each test case contains a single integer X, the cost of each ticket.
+
+Output Format
+
+For each test case, output YES if they will go to the concert, otherwise NO.
+
+(Output is case-insensitive.)
+
+Constraints
+
+1 ≤ T ≤ 100
+
+1 ≤ X ≤ 1000
+
+Program
+t=int(input())
+for i in range(t):
+    x=int(input())
+    if x*4<=1000:
+        print("YES")
+    else:
+        print("NO")
+
+Input
+4
+100
+500
+250
+1000
+
+Output
+YES
+NO
+YES
+NO
+
+Explanation
+
+Test case 1: Total cost = 100 × 4 = 400 ≤ 1000 → YES
+
+Test case 2: Total cost = 500 × 4 = 2000 > 1000 → NO
+
+Test case 3: Total cost = 250 × 4 = 1000 ≤ 1000 → YES
+
+Test case 4: Total cost = 1000 × 4 = 4000 > 1000 → NO
+
+
+
+
+
+
+
+
+Program 2
+
+Water Mixing
+
+Chef is setting up a perfect bath for himself. He has X litres of hot water and Y litres of cold water.
+The initial temperature of water in his bathtub is A degrees.
+On mixing water, the temperature of the bathtub changes as follows:
+
+The temperature rises by 1 degree on mixing 1 litre of hot water.
+
+The temperature drops by 1 degree on mixing 1 litre of cold water.
+
+Determine whether he can set the temperature to B degrees for a perfect bath.
+
+Input Format
+
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of four space-separated integers A, B, X, Y —
+the initial temperature of bathtub, the desired temperature, the litres of hot water, and the litres of cold water respectively.
+
+Output Format
+
+For each test case, output YES if Chef can get the desired temperature for his bath, and NO otherwise.
+
+The output is case-insensitive.
+
+Constraints
+
+1 ≤ T ≤ 2000
+
+20 ≤ A, B ≤ 40
+
+0 ≤ X, Y ≤ 20
+
+Program
+t=int(input())
+for i in range(t):
+    a,b,x,y= map(int, input().split())
+    if b>a:
+        print("YES" if b-a<=x else "NO")
+    elif b<a:
+        print("YES" if a-b<=y else "NO")
+    else:
+        print("YES")
+
+Input
+4
+24 25 2 0
+37 37 2 9
+30 20 10 9
+30 31 0 20
+
+Output
+YES
+YES
+NO
+NO
+
+Explanation
+
+Test case 1:
+Initial temp = 24, desired = 25 → need +1 degree → add 1 litre hot water → possible → YES.
+
+Test case 2:
+Already at desired temp → YES.
+
+Test case 3:
+Need −10 degrees but only 9 litres cold water available → NO.
+
+Test case 4:
+Need +1 degree but no hot water available → NO.
+
+
+
+
+
+
+
